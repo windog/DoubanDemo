@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DoubanTest</string>
+    <string name="app_name">DoubanDemo</string>
 
     <!-- tabs 的显示名称都写在这里 -->
     <string-array name="pager_name">

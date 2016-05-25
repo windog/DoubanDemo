@@ -54,6 +54,7 @@ public class MainActivity extends FragmentActivity {
          * @param position The position of the title requested
          * @return A title for the requested page
          */
+        // 使tab可以显示对应fragment的title
         @Override
         public CharSequence getPageTitle(int position) {
             return TITLES[position];
@@ -64,13 +65,14 @@ public class MainActivity extends FragmentActivity {
          *
          * @param position
          */
+        // 返回对应position的fragment 设置pagerFragment的arguments使得该fragment可以在TextView中显示
         @Override
         public Fragment getItem(int position) {
             Bundle bundle = new Bundle();
             Fragment pagerFragment;
 
-            if (position == 0) {
-                pagerFragment = new PagerFragment();
+            if (position%2 == 0) {
+                pagerFragment = new ListFRefreshFragment();
             } else {
                 pagerFragment = new PagerFragment();
             }
