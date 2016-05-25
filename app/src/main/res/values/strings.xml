@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DoubanTest</string>
+
+    <string-array name="pager_name">
+        <item>热门</item>
+        <item>电影</item>
+        <item>读书</item>
+        <item>电视</item>
+        <item>活动</item>
+        <item>音乐</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
