@@ -17,7 +17,8 @@ public class MainActivity extends FragmentActivity {
 
     private PagerSlidingTabStrip pagerTab;
     private ViewPager pager;
-    public final int NUM_PAGES = 4;
+    // 可用的页签数目，应该在 Adapter 的 getCount() 中动态获取 ，这里写死了
+    public final int NUM_PAGES = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class MainActivity extends FragmentActivity {
 
         pagerTab = (PagerSlidingTabStrip) findViewById(R.id.pager_tabs);
         pager = (ViewPager) findViewById(R.id.pager);
-
+        //设置预加载页数
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
         pagerTab.setViewPager(pager);
@@ -36,7 +37,7 @@ public class MainActivity extends FragmentActivity {
 
     }
 
-    private class PagerAdapter extends FragmentPagerAdapter{
+    private class PagerAdapter extends FragmentPagerAdapter {
 
         private final String[] TITLES = getResources().getStringArray(R.array.pager_name);
 
@@ -74,7 +75,7 @@ public class MainActivity extends FragmentActivity {
                 pagerFragment = new PagerFragment();
             }
 
-            bundle.putInt("page_num",position);
+            bundle.putInt("page_num", position);
             pagerFragment.setArguments(bundle);
 
             return pagerFragment;

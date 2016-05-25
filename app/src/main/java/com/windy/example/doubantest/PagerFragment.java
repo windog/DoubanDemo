@@ -19,12 +19,12 @@ public class PagerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View pager = inflater.inflate(R.layout.pager_fragment,container,false);
+        View pager = inflater.inflate(R.layout.pager_fragment, container, false);
 
         tv = (TextView) pager.findViewById(R.id.tv);
         Bundle bundle = getArguments();
         pageNum = bundle.getInt("page_num");
-        tv.setText(""+pageNum);
+        tv.setText("" + pageNum);
 
         return pager;
     }

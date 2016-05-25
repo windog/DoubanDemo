@@ -11,12 +11,12 @@
         android:id="@+id/pager_tabs"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:textColor="#ff8f8f8f"
-        android:textSize = "18sp"
         android:background="#ff2d2d2d"
-        app:pstsShouldExpand="true"
+        android:textColor="#ff8f8f8f"
+        android:textSize="24sp"
+        app:pstsIndicatorColor="#ff00cd79"
         app:pstsIndicatorHeight="4dp"
-        app:pstsIndicatorColor="#ff00cd79"/>
+        app:pstsShouldExpand="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

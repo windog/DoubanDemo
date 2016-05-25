@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DoubanTest</string>
 
+    <!-- tabs 的显示名称都写在这里 -->
     <string-array name="pager_name">
         <item>热门</item>
         <item>电影</item>
