@@ -28,7 +28,7 @@ public class MainActivity extends FragmentActivity {
 
         pagerTab = (PagerSlidingTabStrip) findViewById(R.id.pager_tabs);
         pager = (ViewPager) findViewById(R.id.pager);
-        //设置预加载页数
+        //设置预加载页数 , 不设置的话默认一页（只会预加载相邻的一页）
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
         pagerTab.setViewPager(pager);
@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity {
          *
          * @param position
          */
-        // 返回对应position的fragment 设置pagerFragment的arguments使得该fragment可以在TextView中显示
+        // 返回对应position的fragment 设置pagerFragment的arguments使得该fragment可以在TextView中显示数字
         @Override
         public Fragment getItem(int position) {
             Bundle bundle = new Bundle();
