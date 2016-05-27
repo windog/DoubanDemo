@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by windog on 2016/5/25.
  */
-public class ListFRefreshFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+public class ListRefreshFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
     private ListView lv;
     private SwipeRefreshLayout mSwipeRefreshLayout;

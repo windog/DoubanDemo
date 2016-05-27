@@ -72,7 +72,7 @@ public class MainActivity extends FragmentActivity {
             Fragment pagerFragment;
 
             if (position%2 == 0) {
-                pagerFragment = new ListFRefreshFragment();
+                pagerFragment = new ListRefreshFragment();
             } else {
                 pagerFragment = new PagerFragment();
             }
